@@ -154,7 +154,6 @@ export default function Totalizador() {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [statusFilter, setStatusFilter] = useState<"all" | "negative" | "positive" | "zero">("all");
-  const [cooperfloraOpen, setCooperfloraOpen] = useState(false);
   const ITEMS_PER_PAGE = 20;
 
   const queryClient = useQueryClient();
@@ -687,10 +686,6 @@ export default function Totalizador() {
                 className="pl-7 h-7 text-xs"
               />
             </div>
-            <CooperfloraButton
-              stage={cooperfloraOpen ? 2 : 0}
-              onToggle={() => setCooperfloraOpen(prev => !prev)}
-            />
           </div>
         );
       })()}

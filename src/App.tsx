@@ -7,6 +7,7 @@ import { AuthProvider, useAuth } from "@/contexts/AuthContext";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import Login from "./pages/Login";
 import AdminLayout from "./components/AdminLayout";
+import Dashboard from "./pages/admin/Dashboard";
 import Totalizador from "./pages/admin/Totalizador";
 import Saidas from "./pages/admin/Saidas";
 import Entradas from "./pages/admin/Entradas";
@@ -55,7 +56,8 @@ const App = () => (
             <Route path="/" element={<RootRedirect />} />
             <Route path="/login" element={<Login />} />
             <Route path="/admin" element={<AdminLayout />}>
-              <Route index element={<Totalizador />} />
+              <Route index element={<Dashboard />} />
+              <Route path="totalizador" element={<Totalizador />} />
               <Route path="saidas" element={<Saidas />} />
               <Route path="entradas" element={<Entradas />} />
               <Route path="produtos" element={<Produtos />} />

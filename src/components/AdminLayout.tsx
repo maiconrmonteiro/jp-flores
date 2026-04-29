@@ -2,7 +2,7 @@ import { NavLink, Outlet, Navigate, useLocation } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
 import {
-  BarChart3, PackagePlus, PackageMinus, Box, Users, Truck, ShoppingCart, Factory, LogOut, Menu, X, ShoppingBag, ClipboardList, Calculator, ChevronDown, BookUser, FileText, Flower2, KeyRound, DollarSign, Wallet, CreditCard
+  BarChart3, PackagePlus, PackageMinus, Box, Users, Truck, ShoppingCart, Factory, LogOut, Menu, X, ShoppingBag, ClipboardList, Calculator, ChevronDown, BookUser, FileText, Flower2, KeyRound, DollarSign, Wallet, CreditCard, LayoutDashboard
 } from "lucide-react";
 import { ChangePasswordDialog } from "@/components/ChangePasswordDialog";
 import { useState } from "react";
@@ -12,14 +12,14 @@ import { ApplyPricesButton } from "@/components/ApplyPricesButton";
 import { useMarkup, MARKUP_PRESETS } from "@/hooks/use-markup";
 
 const mainLinks = [
-  { to: "/admin", icon: BarChart3, label: "Totalizador", end: true },
+  { to: "/admin", icon: LayoutDashboard, label: "Dashboard", end: true },
+  { to: "/admin/totalizador", icon: BarChart3, label: "Totalizador" },
   { to: "/admin/saidas", icon: PackageMinus, label: "Saídas" },
   { to: "/admin/entradas", icon: PackagePlus, label: "Entradas" },
   { to: "/admin/ambulantes", icon: ShoppingBag, label: "Ambulantes" },
   { to: "/admin/ambulantes-fixos", icon: ClipboardList, label: "Pedidos Fixos" },
   { to: "/admin/acerto-motorista", icon: Calculator, label: "Acerto Motorista" },
   { to: "/admin/orcamentos", icon: FileText, label: "Orçamentos" },
-  { to: "/admin/cooperflora", icon: Flower2, label: "Cooperflora" },
   { to: "/admin/custos-fixos", icon: DollarSign, label: "Custos Fixos" },
 ];
 
