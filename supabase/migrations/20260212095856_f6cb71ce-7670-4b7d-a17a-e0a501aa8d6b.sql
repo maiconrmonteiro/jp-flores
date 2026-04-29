@@ -1,1 +1,0 @@
-ALTER TABLE public.pedidos_entrada ADD COLUMN tipo_pagamento text NOT NULL DEFAULT 'avista';

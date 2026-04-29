@@ -1,1 +1,0 @@
-DELETE FROM clientes WHERE id IN ('5558d2a4-1e7e-4169-b06e-afe3b5e7821e', '67713fac-d730-4534-85cb-debcacd538f7');

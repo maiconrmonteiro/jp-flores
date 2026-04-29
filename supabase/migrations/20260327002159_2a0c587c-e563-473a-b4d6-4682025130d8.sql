@@ -1,1 +1,0 @@
-ALTER TABLE public.acertos_motorista ADD COLUMN archived boolean NOT NULL DEFAULT false;

@@ -1,1 +1,0 @@
-ALTER TABLE public.financeiro_receber ADD COLUMN observacao text DEFAULT '';

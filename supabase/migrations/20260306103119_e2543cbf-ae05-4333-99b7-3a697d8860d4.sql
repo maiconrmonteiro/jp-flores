@@ -1,1 +1,0 @@
-ALTER TABLE public.clientes ADD COLUMN telefone text DEFAULT NULL;

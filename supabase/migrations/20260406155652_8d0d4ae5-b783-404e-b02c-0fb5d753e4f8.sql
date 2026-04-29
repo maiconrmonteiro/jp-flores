@@ -1,1 +1,0 @@
-ALTER TABLE public.pagamentos ADD COLUMN motorista_id uuid REFERENCES public.motoristas(id) ON DELETE SET NULL;

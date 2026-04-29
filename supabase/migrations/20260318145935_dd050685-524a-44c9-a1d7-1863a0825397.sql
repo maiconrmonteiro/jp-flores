@@ -1,1 +1,0 @@
-ALTER TABLE public.motoristas ADD COLUMN terceirizado boolean NOT NULL DEFAULT false;

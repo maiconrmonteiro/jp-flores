@@ -1,1 +1,0 @@
-ALTER TABLE public.pedidos_saida ADD COLUMN observacao text DEFAULT '';

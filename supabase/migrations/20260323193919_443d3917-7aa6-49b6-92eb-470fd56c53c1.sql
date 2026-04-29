@@ -1,1 +1,0 @@
-ALTER TABLE public.pedidos_entrada ADD COLUMN desconto numeric NOT NULL DEFAULT 0;
