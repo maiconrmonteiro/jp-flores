@@ -1,0 +1,7 @@
+project_id = "pwehadzvhufnlwigswfm"
+
+[functions.admin-update-user]
+verify_jwt = false
+
+[functions.get-user-names]
+verify_jwt = false

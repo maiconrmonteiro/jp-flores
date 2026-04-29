@@ -1,0 +1,1 @@
+ALTER TABLE public.pedidos_entrada ALTER COLUMN tipo_pagamento SET DEFAULT '';

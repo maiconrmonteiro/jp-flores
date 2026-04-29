@@ -1,0 +1,4 @@
+UPDATE public.fechamento_semanal SET venda_manual = 16505.49, compra_manual = 9964.70 WHERE motorista_id = '1ef22a03-f0b1-4a0b-85fe-d32b878e3808' AND semana_inicio = '2026-01-06';
+UPDATE public.fechamento_semanal SET venda_manual = 26850.48, compra_manual = 19827.36 WHERE motorista_id = '1ef22a03-f0b1-4a0b-85fe-d32b878e3808' AND semana_inicio = '2026-01-13';
+UPDATE public.fechamento_semanal SET venda_manual = 21199.13, compra_manual = 16374.44 WHERE motorista_id = '1ef22a03-f0b1-4a0b-85fe-d32b878e3808' AND semana_inicio = '2026-01-20';
+UPDATE public.fechamento_semanal SET venda_manual = 25665.02, compra_manual = 19180.45 WHERE motorista_id = '1ef22a03-f0b1-4a0b-85fe-d32b878e3808' AND semana_inicio = '2026-01-27';

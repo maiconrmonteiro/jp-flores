@@ -1,0 +1,1 @@
+ALTER TABLE public.orcamentos ADD COLUMN data date DEFAULT NULL;

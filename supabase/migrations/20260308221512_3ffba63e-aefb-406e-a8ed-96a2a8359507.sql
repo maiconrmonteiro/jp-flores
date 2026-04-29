@@ -1,0 +1,1 @@
+ALTER TABLE public.pedidos_saida ADD COLUMN tipo_pagamento text NOT NULL DEFAULT 'pendente';

@@ -1,0 +1,1 @@
+ALTER TABLE public.pedidos_saida ADD COLUMN desconto numeric NOT NULL DEFAULT 0;
