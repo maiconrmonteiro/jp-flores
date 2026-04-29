@@ -796,7 +796,7 @@ export default function Financeiro() {
 
     return `
       <div style="font-family:'Courier New',monospace;font-size:12px;padding:4mm 2mm 4mm 5mm;height:100%;box-sizing:border-box;display:flex;flex-direction:column;justify-content:flex-start;">
-        <div style="font-weight:bold;font-size:15px;margin-bottom:2px;">ILHA VERDE</div>
+        <div style="font-weight:bold;font-size:15px;margin-bottom:2px;">JP Flores</div>
         <div style="display:flex;justify-content:space-between;margin-bottom:1px;">
           <span>Data: ${hoje}</span>
           <span>Motorista: ${motNome}</span>
@@ -910,7 +910,7 @@ export default function Financeiro() {
       totalGeralDevedor += c.saldo;
       blocosHtml += `<div style="margin-bottom:8px;"><div style="font-weight:bold;font-size:13px;border-bottom:1px solid #333;padding-bottom:1px;margin-bottom:2px;">${c.nome}</div><table style="width:100%;border-collapse:collapse;font-size:11px;"><thead><tr style="border-bottom:1px solid #999;"><th style="text-align:left;padding:1px 6px 1px 0;">Data</th><th style="text-align:right;padding:1px 6px;">Título</th><th style="text-align:right;padding:1px 6px;">Vl.Pago</th><th style="text-align:right;padding:1px 6px;">Devedor</th><th style="text-align:center;padding:1px 6px;">Dias</th><th style="text-align:left;padding:1px 0 1px 6px;">Obs</th></tr></thead><tbody>${rows}</tbody></table><div style="text-align:right;font-weight:bold;font-size:12px;border-top:1px dashed #999;padding-top:1px;margin-top:1px;">Total: R$ ${c.saldo.toFixed(2)}${creditoLine}${cochoLine}</div></div>`;
     });
-    const html = `<!DOCTYPE html><html><head><title>Relatório - ${motNome}</title><style>@page { size: A4; margin: 8mm 10mm; } * { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: 'Courier New', monospace; font-size: 12px; } @media print { .no-print { display: none; } }</style></head><body><div class="no-print" style="padding:10px;text-align:center;background:#f0f0f0;"><button onclick="window.print()" style="padding:8px 24px;font-size:16px;cursor:pointer;">🖨️ Imprimir</button><button onclick="window.close()" style="padding:8px 24px;font-size:16px;cursor:pointer;margin-left:8px;">✕ Fechar</button></div><div style="padding:2mm 0;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;border-bottom:2px solid #000;padding-bottom:4px;"><div><div style="font-weight:bold;font-size:16px;">ILHA VERDE — Relatório de Cobranças</div><div style="font-size:12px;">Motorista: ${motNome} | Data: ${hoje}</div></div><div style="font-weight:bold;font-size:15px;">Total: R$ ${totalGeralDevedor.toFixed(2)}</div></div>${blocosHtml}<div style="border-top:2px solid #000;padding-top:4px;margin-top:8px;display:flex;justify-content:flex-end;font-weight:bold;font-size:14px;">Total Geral Devedor: R$ ${totalGeralDevedor.toFixed(2)}</div></div></body></html>`;
+    const html = `<!DOCTYPE html><html><head><title>Relatório - ${motNome}</title><style>@page { size: A4; margin: 8mm 10mm; } * { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: 'Courier New', monospace; font-size: 12px; } @media print { .no-print { display: none; } }</style></head><body><div class="no-print" style="padding:10px;text-align:center;background:#f0f0f0;"><button onclick="window.print()" style="padding:8px 24px;font-size:16px;cursor:pointer;">🖨️ Imprimir</button><button onclick="window.close()" style="padding:8px 24px;font-size:16px;cursor:pointer;margin-left:8px;">✕ Fechar</button></div><div style="padding:2mm 0;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;border-bottom:2px solid #000;padding-bottom:4px;"><div><div style="font-weight:bold;font-size:16px;">JP Flores — Relatório de Cobranças</div><div style="font-size:12px;">Motorista: ${motNome} | Data: ${hoje}</div></div><div style="font-weight:bold;font-size:15px;">Total: R$ ${totalGeralDevedor.toFixed(2)}</div></div>${blocosHtml}<div style="border-top:2px solid #000;padding-top:4px;margin-top:8px;display:flex;justify-content:flex-end;font-weight:bold;font-size:14px;">Total Geral Devedor: R$ ${totalGeralDevedor.toFixed(2)}</div></div></body></html>`;
     const w = window.open("", "_blank");
     if (w) { w.document.write(html); w.document.close(); }
   };
@@ -988,7 +988,7 @@ export default function Financeiro() {
     <div style="padding:2mm 0;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;border-bottom:2px solid #000;padding-bottom:4px;">
         <div>
-          <div style="font-weight:bold;font-size:16px;">ILHA VERDE — Pagos no Período</div>
+          <div style="font-weight:bold;font-size:16px;">JP Flores — Pagos no Período</div>
           <div style="font-size:12px;">Motorista: ${motNome} | Período: ${periodo} | Emitido: ${hoje}</div>
         </div>
         <div style="font-weight:bold;font-size:15px;">Total: R$ ${totalGeral.toFixed(2)}</div>

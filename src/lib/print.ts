@@ -19,7 +19,7 @@ function loadLogoBase64(): Promise<string | null> {
   if (logoLoadPromise) return logoLoadPromise;
   logoLoadPromise = (async () => {
     try {
-      const res = await fetch("/logo-ilha-verde.png");
+      const res = await fetch("/logo-jp-flores.png");
       const blob = await res.blob();
       return new Promise<string | null>((resolve) => {
         const reader = new FileReader();
@@ -54,7 +54,7 @@ async function drawCompanyHeader(pdf: jsPDF, logoBase64: string | null): Promise
   pdf.setFont("helvetica", "bold");
   pdf.setFontSize(10);
   pdf.setTextColor(0, 0, 0);
-  pdf.text("Ilha Verde", textX, y + 2.5);
+  pdf.text("JP Flores", textX, y + 2.5);
 
   pdf.setFontSize(6.5);
   pdf.text("Comércio de Flores LTDA.", textX, y + 5.5);
@@ -227,7 +227,7 @@ export async function printEntradaA4(pedido: any) {
   const consolidated = consolidateItems(rawItens, "preco_custo");
   const itens = sortByUnitThenName(consolidated, (i: any) => i.produtos?.unidade || "", (i: any) => i.produtos?.descricao || "");
 
-  const logoUrl = `${window.location.origin}/logo-ilha-verde.png`;
+  const logoUrl = `${window.location.origin}/logo-jp-flores.png`;
   const dataFormatada = fmtDate(pedido.data);
   const orcamentoNum = pedido.orcamento_num || "";
   const tipoPagLabel = formatTipoPagamento(pedido.tipo_pagamento);
@@ -268,7 +268,7 @@ export async function printEntradaA4(pedido: any) {
     <div class="header">
       <img src="${logoUrl}" alt="Logo"/>
       <div class="header-info">
-        <div class="empresa">Ilha Verde Comércio de Flores LTDA.</div>
+        <div class="empresa">JP Flores LTDA.</div>
         <div class="cnpj">CNPJ: 16.905.456/0001-30</div>
         <div class="data">Data: ${dataFormatada}</div>
       </div>
@@ -551,7 +551,7 @@ export async function printSaidaA4(pedido: any, descontoPercent = 0, observacao 
   const consolidated = consolidateItems(rawItens, "preco");
   const itens = sortByUnitThenName(consolidated, (i: any) => i.produtos?.unidade || "", (i: any) => i.produtos?.descricao || "");
 
-  const logoUrl = `${window.location.origin}/logo-ilha-verde.png`;
+  const logoUrl = `${window.location.origin}/logo-jp-flores.png`;
   const dataFormatada = fmtDate(pedido.data);
   const orcamentoNum = pedido.orcamento_num || "";
 
@@ -642,7 +642,7 @@ export async function printSaidaA4(pedido: any, descontoPercent = 0, observacao 
     <div class="header">
       <img src="${logoUrl}" alt="Logo"/>
       <div class="header-info">
-        <div class="empresa">Ilha Verde Comércio de Flores LTDA.</div>
+        <div class="empresa">JP Flores LTDA.</div>
         <div class="cnpj">CNPJ: 16.905.456/0001-30</div>
         <div class="data">Data: ${dataFormatada}</div>
       </div>
@@ -669,7 +669,7 @@ export async function printAllSaidasA4(pedidos: any[]) {
 
   // Print each pedido individually using printSaidaA4-style rendering
   // but combined into a single document with forced page breaks
-  const logoUrl = `${window.location.origin}/logo-ilha-verde.png`;
+  const logoUrl = `${window.location.origin}/logo-jp-flores.png`;
 
   const pages: string[] = [];
 
@@ -739,7 +739,7 @@ export async function printAllSaidasA4(pedidos: any[]) {
       <div class="header">
         <img src="${logoUrl}" alt="Logo"/>
         <div class="header-info">
-          <div class="empresa">Ilha Verde Comércio de Flores LTDA.</div>
+          <div class="empresa">JP Flores LTDA.</div>
           <div class="cnpj">CNPJ: 16.905.456/0001-30</div>
           <div class="data">Data: ${dataFormatada}</div>
         </div>
@@ -816,7 +816,7 @@ export async function printOrcamentoA4(
     pdf.setFont("helvetica", "bold");
     pdf.setFontSize(18);
     pdf.setTextColor(0, 0, 0);
-    pdf.text("Ilha Verde", startX + logoW + 4, y + 10);
+    pdf.text("JP Flores", startX + logoW + 4, y + 10);
     pdf.setFont("helvetica", "normal");
     pdf.setFontSize(13);
     pdf.setTextColor(60, 60, 60);
@@ -825,7 +825,7 @@ export async function printOrcamentoA4(
   } else {
     pdf.setFont("helvetica", "bold");
     pdf.setFontSize(18);
-    pdf.text("Ilha Verde", pageW / 2, y, { align: "center" });
+    pdf.text("JP Flores", pageW / 2, y, { align: "center" });
     y += 8;
     pdf.setFont("helvetica", "normal");
     pdf.setFontSize(13);
@@ -1023,7 +1023,7 @@ function formatTipoPagamento(tp?: string): string {
 export async function printAllEntradasA4(pedidos: any[]) {
   if (!pedidos.length) return;
 
-  const logoUrl = `${window.location.origin}/logo-ilha-verde.png`;
+  const logoUrl = `${window.location.origin}/logo-jp-flores.png`;
   const styles = `
     body{font-family:Arial,Helvetica,sans-serif;margin:15px;font-size:11px;color:#222}
     .page{page-break-after:always}
@@ -1078,7 +1078,7 @@ export async function printAllEntradasA4(pedidos: any[]) {
         <div class="header">
           <img src="${logoUrl}" alt="Logo"/>
           <div class="header-info">
-            <div class="empresa">Ilha Verde Comércio de Flores LTDA.</div>
+            <div class="empresa">JP Flores LTDA.</div>
             <div class="cnpj">CNPJ: 16.905.456/0001-30</div>
             <div class="data">Data: ${dataFormatada}</div>
           </div>
@@ -1145,7 +1145,7 @@ export async function exportOrcamentoImage(orcamento: OrcPayload): Promise<void>
   let y = PAD;
 
   // Logo
-  const logoSrc = "/logo-ilha-verde.png";
+  const logoSrc = "/logo-jp-flores.png";
   const logoImg = await new Promise<HTMLImageElement | null>(resolve => {
     const img = new Image();
     img.onload = () => resolve(img);
@@ -1163,7 +1163,7 @@ export async function exportOrcamentoImage(orcamento: OrcPayload): Promise<void>
   const textX = PAD + LOGO_SIZE + 18;
   ctx.fillStyle = "#1a4a1a";
   ctx.font = "bold 30px system-ui, Arial, sans-serif";
-  ctx.fillText("Ilha Verde", textX, headerCenterY - 6);
+  ctx.fillText("JP Flores", textX, headerCenterY - 6);
   ctx.fillStyle = "#4a7c4a";
   ctx.font = "20px system-ui, Arial, sans-serif";
   ctx.fillText("Orçamentos", textX, headerCenterY + 20);
@@ -1331,7 +1331,7 @@ export async function exportOrcamentoImage(orcamento: OrcPayload): Promise<void>
 
   if (isMobile && navigator.share && navigator.canShare?.({ files: [file] })) {
     try {
-      await navigator.share({ files: [file], title: "Orçamento Ilha Verde" });
+      await navigator.share({ files: [file], title: "Orçamento JP Flores" });
       return;
     } catch {
       // User cancelled or share failed — fall through
@@ -1525,7 +1525,7 @@ export async function printAmbulanteA4(
   pdf.setFont("helvetica", "bold");
   pdf.setFontSize(13);
   pdf.setTextColor(0, 0, 0);
-  pdf.text("Ilha Verde", margin + 16, y + 5);
+  pdf.text("JP Flores", margin + 16, y + 5);
   pdf.setFont("helvetica", "normal");
   pdf.setFontSize(8);
   pdf.setTextColor(80, 80, 80);

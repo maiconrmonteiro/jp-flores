@@ -633,7 +633,7 @@ export default function MotoristaFinanceiro({ motoristaId, motoristaNome, onBack
 
     return `
       <div style="font-family:'Courier New',monospace;font-size:12px;padding:4mm 2mm 4mm 5mm;height:100%;box-sizing:border-box;display:flex;flex-direction:column;justify-content:flex-start;">
-        <div style="font-weight:bold;font-size:15px;margin-bottom:2px;">ILHA VERDE</div>
+        <div style="font-weight:bold;font-size:15px;margin-bottom:2px;">JP Flores</div>
         <div style="display:flex;justify-content:space-between;margin-bottom:1px;">
           <span>Data: ${hoje}</span>
           <span>Motorista: ${motoristaNome}</span>
@@ -817,7 +817,7 @@ export default function MotoristaFinanceiro({ motoristaId, motoristaNome, onBack
     <div style="padding:2mm 0;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;border-bottom:2px solid #000;padding-bottom:4px;">
         <div>
-          <div style="font-weight:bold;font-size:16px;">ILHA VERDE — Relatório de Cobranças</div>
+          <div style="font-weight:bold;font-size:16px;">JP Flores — Relatório de Cobranças</div>
           <div style="font-size:12px;">Motorista: ${motoristaNome} | Data: ${hoje}</div>
         </div>
         <div style="font-weight:bold;font-size:15px;">Total: R$ ${totalGeralDevedor.toFixed(2)}</div>

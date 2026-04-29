@@ -281,7 +281,7 @@ export default function CompradorDashboard() {
       <OfflineIndicator />
       <div className="flex items-center justify-between mb-4 rounded-lg p-3" style={{ background: "linear-gradient(135deg, hsl(142 50% 95%), hsl(142 40% 90%))" }}>
         <div className="flex items-center gap-3">
-          <img src="/logo-ilha-verde.png" alt="Ilha Verde" className="h-10 w-auto" />
+          <img src="/logo-jp-flores.png" alt="JP Flores" className="h-10 w-auto" />
           <h1 className="text-xl font-bold">Painel do Comprador {comprador?.nome || ""}</h1>
           <ChangePasswordDialog />
         </div>

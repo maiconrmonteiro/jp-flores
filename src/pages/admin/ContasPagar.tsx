@@ -927,7 +927,7 @@ export default function ContasPagar() {
     <div style="padding:2mm 0;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;border-bottom:2px solid #000;padding-bottom:4px;">
         <div>
-          <div style="font-weight:bold;font-size:16px;">ILHA VERDE — ${titulo}</div>
+          <div style="font-weight:bold;font-size:16px;">JP Flores — ${titulo}</div>
           <div style="font-size:12px;">Data: ${hoje}</div>
         </div>
         <div style="font-weight:bold;font-size:15px;">Total: R$ ${grandTotal.toFixed(2)}</div>
@@ -1051,7 +1051,7 @@ export default function ContasPagar() {
     </div>
     <div class="content">
       <div class="header-block">
-        ILHA VERDE — AP Casa
+        JP Flores — AP Casa
         <span style="font-size:16px;font-weight:normal;margin-left:10px;">${hoje}</span>
       </div>
       ${blocosHtml}
@@ -1145,7 +1145,7 @@ export default function ContasPagar() {
       <div style="padding:2mm 0;">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;border-bottom:2px solid #000;padding-bottom:4px;">
           <div>
-            <div style="font-weight:bold;font-size:16px;">ILHA VERDE — Crédito - ${nome}</div>
+            <div style="font-weight:bold;font-size:16px;">JP Flores — Crédito - ${nome}</div>
             <div style="font-size:12px;">Data: ${hoje}</div>
           </div>
         </div>

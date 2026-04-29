@@ -201,7 +201,7 @@ function buildHeader(buf: number[]) {
   buf.push(...CMD.ALIGN_LEFT);
   buf.push(...CMD.BOLD_ON);
   buf.push(...CMD.FONT_DOUBLE_H);
-  buf.push(...ln('Ilha Verde'));
+  buf.push(...ln('JP Flores'));
   buf.push(...CMD.FONT_NORMAL);
   buf.push(...CMD.BOLD_ON);
   buf.push(...ln('Comercio de Flores LTDA.'));

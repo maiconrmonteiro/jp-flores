@@ -1016,7 +1016,7 @@ export default function MotoristaDashboard() {
     <div className="max-w-4xl mx-auto p-4">
       <OfflineIndicator />
       <div className="flex flex-wrap items-center gap-1.5 mb-3">
-        <img src="/logo-ilha-verde.png" alt="Ilha Verde" className="h-8 w-auto shrink-0" />
+        <img src="/logo-jp-flores.png" alt="JP Flores" className="h-8 w-auto shrink-0" />
         <span className="text-base font-semibold truncate">{motorista?.nome || ""}</span>
         <ChangePasswordDialog />
         <Button variant="outline" size="icon" className="h-7 w-7" onClick={() => setFixosDialogOpen(true)} title="Pedidos Fixos"><Package className="h-3.5 w-3.5" /></Button>

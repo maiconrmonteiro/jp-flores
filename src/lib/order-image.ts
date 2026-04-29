@@ -78,7 +78,7 @@ export async function copyOrderImageToClipboard(pedido: any): Promise<string> {
   const headerY = 25;
   let logoEndX = PADDING;
   try {
-    const logo = await loadImage("/logo-ilha-verde.png");
+    const logo = await loadImage("/logo-jp-flores.png");
     const logoH = 60;
     const logoW = (logo.width / logo.height) * logoH;
     ctx.drawImage(logo, PADDING, headerY, logoW, logoH);

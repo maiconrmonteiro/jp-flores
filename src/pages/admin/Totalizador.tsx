@@ -296,7 +296,7 @@ export default function Totalizador() {
     ...todasSaidas,
   ];
 
-  const logoUrl = `${window.location.origin}/logo-ilha-verde.png`;
+  const logoUrl = `${window.location.origin}/logo-jp-flores.png`;
   const dataFormatada = dataFiltro.split("-").reverse().join("/");
 
   const printStyles = `
@@ -329,7 +329,7 @@ export default function Totalizador() {
     <div class="header">
       <img src="${logoUrl}" alt="Logo"/>
       <div class="header-info">
-        <div class="empresa">Ilha Verde Comércio de Flores LTDA.</div>
+        <div class="empresa">JP Flores LTDA.</div>
         <div class="cnpj">CNPJ: 16.905.456/0001-30</div>
         <div class="data">Data: ${dataFormatada}</div>
       </div>
@@ -408,7 +408,7 @@ export default function Totalizador() {
     const [yyyy, mm, dd] = dataFiltro.split("-");
     const dateObj = new Date(Number(yyyy), Number(mm) - 1, Number(dd));
     const diaSemana = dias[dateObj.getDay()];
-    const titulo = `Ilha Verde, ${Number(dd)} de ${meses[Number(mm) - 1]} de ${yyyy}, ${diaSemana}`;
+    const titulo = `JP Flores, ${Number(dd)} de ${meses[Number(mm) - 1]} de ${yyyy}, ${diaSemana}`;
 
     const colW = numMot > 0 ? Math.floor(90 / (numMot + 1)) : 90; // +1 for Produto col approx
     const listaStyles = `
@@ -496,7 +496,7 @@ export default function Totalizador() {
     if (mode === "positives") filtered = filtered.filter(r => r.saldo > 0);
 
     const modeLabel = mode === "negatives" ? " (Negativos)" : mode === "positives" ? " (Positivos)" : "";
-    let body = `<div style="text-align:center;margin-bottom:10px"><strong>Ilha Verde</strong> — ${dataFormatada}</div>`;
+    let body = `<div style="text-align:center;margin-bottom:10px"><strong>JP Flores</strong> — ${dataFormatada}</div>`;
     body += `<h2 style="text-align:center;font-size:15px;margin:0 0 10px">Saldo${motoristaLabel}${modeLabel}</h2>`;
     body += `<table><thead><tr><th>Produto</th><th>UN</th><th>Saldo</th><th>Preço Venda</th></tr></thead><tbody>`;
     filtered.forEach(r => {
@@ -510,7 +510,7 @@ export default function Totalizador() {
         filename: `saldo_${mode}_${dataFiltro}`,
         sheetName: "Saldo",
         title: `Saldo${motoristaLabel}${modeLabel}`,
-        info: [`Ilha Verde — ${dataFormatada}`],
+        info: [`JP Flores — ${dataFormatada}`],
         columns: [
           { header: "Produto", key: "descricao", width: 30 },
           { header: "UN", key: "unidade", width: 8, align: "center" },

@@ -612,7 +612,7 @@ export default function AcertoMotorista() {
       : "";
     const activeRows = rows.filter((r) => getQty(r) > 0);
 
-    const logoUrl = `${window.location.origin}/logo-ilha-verde.png`;
+    const logoUrl = `${window.location.origin}/logo-jp-flores.png`;
 
     const printCustoTotal = activeRows.reduce((s, r) => s + getQty(r) * getCusto(r), 0);
     const printMargem = printCustoTotal * 0.32;
@@ -661,7 +661,7 @@ export default function AcertoMotorista() {
       <div class="header">
         <img src="${logoUrl}" alt="Logo"/>
         <div class="header-info">
-          <div class="empresa">Ilha Verde Comércio de Flores LTDA.</div>
+          <div class="empresa">JP Flores LTDA.</div>
           <div class="cnpj">CNPJ: 16.905.456/0001-30</div>
           <div class="data">Data: ${dataFormatada}</div>
         </div>

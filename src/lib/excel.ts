@@ -1,6 +1,6 @@
 import XLSX from "xlsx-js-style";
 
-const EMPRESA = "Ilha Verde Comércio de Flores LTDA.";
+const EMPRESA = "JP Flores LTDA.";
 const CNPJ = "CNPJ: 16.905.456/0001-30";
 
 const BORDER_THIN = {

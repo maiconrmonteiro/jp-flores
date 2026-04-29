@@ -30,8 +30,8 @@ export default function FinanceiroLayout() {
         open ? "translate-x-0" : "-translate-x-full"
       )}>
         <div className="p-4 border-b border-sidebar-border flex items-center gap-3">
-          <img src="/logo-ilha-verde.png" alt="Ilha Verde" className="h-10 w-auto" />
-          <span className="font-bold text-xs text-sidebar-foreground leading-tight">Ilha Verde<br/>Financeiro</span>
+          <img src="/logo-jp-flores.png" alt="JP Flores" className="h-10 w-auto" />
+          <span className="font-bold text-xs text-sidebar-foreground leading-tight">JP Flores<br/>Financeiro</span>
         </div>
         <nav className="flex-1 p-2 space-y-0.5 overflow-y-auto">
           {links.map(l => (
